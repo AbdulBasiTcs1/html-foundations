@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Learning Practice — HTML Foundations</title>
+	<style>
+		:root{--bg:#f7fafc;--card:#fff;--accent:#2563eb;--muted:#6b7280}
+		*{box-sizing:border-box}
+		body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;margin:0;background:var(--bg);color:#111}
+		header{background:linear-gradient(90deg,#eef2ff,#fff);padding:2rem 1rem;border-bottom:1px solid #e6eef8}
+		.container{max-width:900px;margin:0 auto;padding:1rem}
+		h1{margin:0 0 .25rem;font-size:1.5rem}
+		p.lead{margin:0;color:var(--muted)}
+		.grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+		@media(min-width:760px){.grid{grid-template-columns:2fr 1fr}}
+		.card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+		nav ul{display:flex;gap:.5rem;padding:0;margin:0;list-style:none}
+		nav a{color:var(--accent);text-decoration:none;font-weight:600}
+		.resources ul{padding-left:1rem}
+		.quiz .question{margin-bottom:1rem}
+		.quiz button{background:var(--accent);color:#fff;border:0;padding:.6rem .9rem;border-radius:6px;cursor:pointer}
+		.result{margin-top:.75rem;padding:.5rem .75rem;border-radius:6px;font-weight:600}
+		.correct{background:#ecfeff;color:#065f46}
+		.wrong{background:#fff1f2;color:#7f1d1d}
+		footer{margin-top:1.5rem;padding:1rem 0;color:var(--muted);font-size:.9rem;text-align:center}
+		.muted{color:var(--muted);font-size:.9rem}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Learning Practice</h1>
+			<p class="lead">A small interactive page for studying HTML fundamentals and practicing quick quizzes.</p>
+			<nav aria-label="Top navigation">
+				<ul>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#resources">Resources</a></li>
+					<li><a href="#quiz">Quiz</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<div class="grid">
+			<section class="card" id="overview">
+				<h2>Overview</h2>
+				<p>Use this page to read concise notes, open curated resources, and test your knowledge with a short interactive quiz. It's responsive and works locally—open the file in your browser to try it.</p>
+				<h3>Study tips</h3>
+				<ul>
+					<li>Read a small topic, then try the quiz immediately.</li>
+					<li>Inspect the page source to see how elements are structured.</li>
+					<li>Experiment by editing this file and reloading the browser.</li>
+				</ul>
+			</section>
+
+			<aside class="card resources" id="resources">
+				<h3>Resources</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN — HTML documentation</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web" target="_blank" rel="noopener">MDN — Getting started with the web</a></li>
+					<li><a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener">W3C — HTML5.2 spec (reference)</a></li>
+				</ul>
+				<p class="muted">Tip: Open DevTools (F12) to inspect elements and try live edits.</p>
+			</aside>
+		</div>
+
+		<section class="card quiz" id="quiz">
+			<h2>Quick Quiz</h2>
+			<p class="muted">Answer the questions below and click <strong>Check answers</strong>.</p>
+
+			<form id="quizForm" aria-labelledby="quiz">
+				<div class="question" data-correct="b">
+					<p><strong>1.</strong> Which element defines the most important heading on a page?</p>
+					<label><input type="radio" name="q1" value="a"> &lt;section&gt;</label><br>
+					<label><input type="radio" name="q1" value="b"> &lt;h1&gt;</label><br>
+					<label><input type="radio" name="q1" value="c"> &lt;header&gt;</label>
+				</div>
+
+				<div class="question" data-correct="c">
+					<p><strong>2.</strong> Which attribute is used to provide alternative text for an image?</p>
+					<label><input type="radio" name="q2" value="a"> title</label><br>
+					<label><input type="radio" name="q2" value="b"> src</label><br>
+					<label><input type="radio" name="q2" value="c"> alt</label>
+				</div>
+
+				<div class="question" data-correct="a">
+					<p><strong>3.</strong> Which tag is appropriate for marking up a navigational section?</p>
+					<label><input type="radio" name="q3" value="a"> &lt;nav&gt;</label><br>
+					<label><input type="radio" name="q3" value="b"> &lt;article&gt;</label><br>
+					<label><input type="radio" name="q3" value="c"> &lt;figure&gt;</label>
+				</div>
+
+				<button type="button" id="checkBtn">Check answers</button>
+				<div id="score" aria-live="polite"></div>
+			</form>
+
+			<script>
+				(function(){
+					const form = document.getElementById('quizForm');
+					const btn = document.getElementById('checkBtn');
+					const scoreEl = document.getElementById('score');
+
+					function getSelectedAnswer(q){
+						const inputs = form.elements[q];
+						if(!inputs) return null;
+						if(inputs.length === undefined) return inputs.checked ? inputs.value : null;
+						for(const i of inputs){ if(i.checked) return i.value; }
+						return null;
+					}
+
+					btn.addEventListener('click', () => {
+						const questions = Array.from(form.querySelectorAll('.question'));
+						let correct = 0;
+						questions.forEach((qEl, idx) => {
+							const correctAnswer = qEl.getAttribute('data-correct');
+							const name = 'q' + (idx + 1);
+							const user = getSelectedAnswer(name);
+							// Remove previous result if present
+							let prev = qEl.querySelector('.result'); if(prev) prev.remove();
+							const res = document.createElement('div');
+							res.className = 'result ' + (user === correctAnswer ? 'correct' : 'wrong');
+							if(user === correctAnswer){ res.textContent = 'Correct'; correct++; }
+							else if(user === null){ res.textContent = 'No answer selected — correct is: ' + correctAnswer.toUpperCase(); }
+							else { res.textContent = 'Wrong — correct is: ' + correctAnswer.toUpperCase(); }
+							qEl.appendChild(res);
+						});
+						scoreEl.textContent = `Score: ${correct} / ${questions.length}`;
+						btn.disabled = true;
+					});
+				})();
+			</script>
+		</section>
+
+		<footer>
+			<p class="muted">Made for learning — edit this file to customize the content. Last updated: 2026-01-12.</p>
+		</footer>
+	</main>
+</body>
+</html>
