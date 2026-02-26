@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="TechCore Hub – A free online platform to learn computer hardware from scratch. Explore CPUs, GPUs, Input and Output devices, and more." />
+    <title>TechCore Hub | Computer Hardware Learning</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <!-- LOGO -->
+            <div class="logo-wrap">
+                <div class="logo-icon" aria-hidden="true">
+                    <span class="cpu-chip">
+                        <span class="chip-core"></span>
+                    </span>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">TechCore Hub</span>
+                    <span class="logo-sub">Computer Hardware Learning</span>
+                </div>
+            </div>
+
+            <!-- NAVIGATION with Internal Links -->
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a> <!-- Internal Link 1 -->
+                <a href="#topics" class="nav-link">Topics</a>
+                <a href="#hardware-table" class="nav-link">Components</a>
+                <a href="#contact" class="nav-link">Contact Us</a> <!-- Internal Link 2 -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <p class="hero-badge">Free Learning Platform</p>
+            <h1 class="hero-title">Understand Your Computer<br /><span class="accent">From the Inside Out</span></h1>
+            <p class="hero-intro">
+                Welcome to <strong>TechCore Hub</strong> — your go-to educational resource for mastering
+                computer hardware. Whether you're a curious beginner or a CS student, we break down
+                complex hardware concepts — from transistors to CPUs — into easy, visual, and
+                interactive lessons. Explore input devices, output devices, storage units, the
+                Central Processing Unit (CPU), the Arithmetic Logic Unit (ALU), and much more.
+            </p>
+            <div class="hero-cta">
+                <a href="#topics" class="btn-primary">Start Learning</a>
+                <a href="#about" class="btn-secondary">About Us</a>
+            </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="circuit-board">
+                <div class="cb-chip cpu">CPU</div>
+                <div class="cb-chip gpu">GPU</div>
+                <div class="cb-chip ram">RAM</div>
+                <div class="cb-chip io">I/O</div>
+                <div class="cb-trace t1"></div>
+                <div class="cb-trace t2"></div>
+                <div class="cb-trace t3"></div>
+                <div class="cb-trace t4"></div>
+                <div class="cb-trace t5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BLOCKQUOTE ========== -->
+    <section class="quote-section">
+        <blockquote class="highlight-quote">
+            <p>"The computer was born to solve problems that did not exist before."</p>
+            <footer>— <cite>Bill Gates, Co-founder of Microsoft</cite></footer>
+        </blockquote>
+    </section>
+
+    <!-- ========== IMAGE SLIDER ========== -->
+    <section class="slider-section" id="slider">
+        <div class="section-header">
+            <h2>Hardware in Focus</h2>
+            <p>A visual tour of core computer components</p>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+
+                <!-- Slide 1: CPU -->
+                <div class="slide active">
+                    <div class="slide-visual cpu-slide">
+                        <div class="slide-icon-wrap">
+                            <div class="big-chip">
+                                <div class="chip-grid">
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="chip-label">CPU</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-info">
+                        <h3>Central Processing Unit (CPU)</h3>
+                        <p>The CPU is the brain of the computer. It executes instructions, performs calculations, and
+                            manages data flow between all components. Modern CPUs contain billions of transistors and
+                            run at speeds measured in gigahertz (GHz).</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: GPU -->
+                <div class="slide">
+                    <div class="slide-visual gpu-slide">
+                        <div class="slide-icon-wrap">
+                            <div class="gpu-card">
+                                <div class="gpu-body">
+                                    <div class="gpu-fans">
+                                        <div class="fan"></div>
+                                        <div class="fan"></div>
+                                    </div>
+                                    <div class="gpu-label">GPU</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-info">
+                        <h3>Graphics Processing Unit (GPU)</h3>
+                        <p>The GPU is specialized hardware designed to render images, video, and animations. Originally
+                            for graphics, GPUs are now also used in AI, scientific simulations, and data processing due
+                            to their massive parallel processing power.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Input Devices -->
+                <div class="slide">
+                    <div class="slide-visual input-slide">
+                        <div class="slide-icon-wrap">
+                            <div class="kb-mouse">
+                                <div class="keyboard">
+                                    <div class="key-row">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="key-row">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="key-row long-key"><span class="spacebar"></span></div>
+                                </div>
+                                <div class="mouse-shape">
+                                    <div class="mouse-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-info">
+                        <h3>Input Devices</h3>
+                        <p>Input devices allow users to send data and commands to the computer. Common input devices
+                            include keyboards, mice, scanners, microphones, webcams, and touchscreens. They convert
+                            human actions into digital signals.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Output Devices -->
+                <div class="slide">
+                    <div class="slide-visual output-slide">
+                        <div class="slide-icon-wrap">
+                            <div class="monitor-svg">
+                                <div class="monitor-screen">
+                                    <div class="screen-content">
+                                        <div class="sc-bar"></div>
+                                        <div class="sc-bar short"></div>
+                                        <div class="sc-bar"></div>
+                                    </div>
+                                </div>
+                                <div class="monitor-stand"></div>
+                                <div class="monitor-base"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-info">
+                        <h3>Output Devices</h3>
+                        <p>Output devices display or produce the results of computer processing. Monitors, printers,
+                            speakers, and projectors are all output devices. They translate digital data back into
+                            human-readable forms such as text, images, or audio.</p>
+                    </div>
+                </div>
+
+            </div><!-- /slider-track -->
+
+            <!-- Controls -->
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)" aria-label="Previous slide">&#8249;</button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)" aria-label="Next slide">&#8250;</button>
+
+            <!-- Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+                <button class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+                <button class="dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+                <button class="dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TOPICS SECTION ========== -->
+    <section id="topics" class="topics-section">
+        <div class="section-header">
+            <h2>What You Will Learn</h2>
+            <p>Structured modules covering every major area of computer hardware</p>
+        </div>
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-icon t-cpu">&#9654;</div>
+                <h3>CPU & ALU</h3>
+                <p>Understand how the Central Processing Unit and Arithmetic Logic Unit execute instructions and perform
+                    computations.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon t-input">&#9654;</div>
+                <h3>Input Devices</h3>
+                <p>Learn about keyboards, mice, scanners, touch screens, and other devices that feed data into the
+                    computer.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon t-output">&#9654;</div>
+                <h3>Output Devices</h3>
+                <p>Explore monitors, printers, speakers, and projectors that display or communicate computer results.
+                </p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon t-storage">&#9654;</div>
+                <h3>Storage & Memory</h3>
+                <p>Discover RAM, ROM, HDD, SSD, and cache memory — how data is stored and retrieved in a computer
+                    system.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon t-motherboard">&#9654;</div>
+                <h3>Motherboard</h3>
+                <p>The backbone of every computer — understand bus architecture, chipsets, and how components
+                    interconnect.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon t-gpu">&#9654;</div>
+                <h3>GPU & Peripherals</h3>
+                <p>Go beyond the basics with Graphics Processing Units and external peripheral devices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HARDWARE TABLE ========== -->
+    <section id="hardware-table" class="table-section">
+        <div class="section-header">
+            <h2>Computer Hardware Reference Table</h2>
+            <p>A quick comparison of major hardware components and their roles</p>
+        </div>
+        <div class="table-wrapper">
+            <table class="hw-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Component</th>
+                        <th>Category</th>
+                        <th>Function</th>
+                        <th>Example</th>
+                        <th>Speed / Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>CPU</strong></td>
+                        <td><span class="tag processing">Processing</span></td>
+                        <td>Executes program instructions and performs calculations</td>
+                        <td>Intel Core i9, AMD Ryzen 9</td>
+                        <td>Up to 5.8 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>ALU</strong></td>
+                        <td><span class="tag processing">Processing</span></td>
+                        <td>Performs arithmetic and logical operations inside the CPU</td>
+                        <td>Part of every CPU core</td>
+                        <td>Billions of ops/sec</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>RAM</strong></td>
+                        <td><span class="tag memory">Memory</span></td>
+                        <td>Temporary storage for data actively used by the CPU</td>
+                        <td>DDR5, LPDDR5</td>
+                        <td>8 GB – 128 GB</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>ROM</strong></td>
+                        <td><span class="tag memory">Memory</span></td>
+                        <td>Stores permanent firmware (e.g., BIOS) that doesn't change</td>
+                        <td>Flash ROM, EEPROM</td>
+                        <td>4 MB – 32 MB</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>SSD</strong></td>
+                        <td><span class="tag storage">Storage</span></td>
+                        <td>Non-volatile flash-based storage for OS, apps, and files</td>
+                        <td>Samsung 990 Pro, WD Black</td>
+                        <td>Up to 7,000 MB/s</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>HDD</strong></td>
+                        <td><span class="tag storage">Storage</span></td>
+                        <td>Magnetic disk-based storage for large data volumes</td>
+                        <td>Seagate Barracuda, WD Blue</td>
+                        <td>Up to 200 MB/s</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>Keyboard</strong></td>
+                        <td><span class="tag input">Input</span></td>
+                        <td>Allows users to type text and issue commands</td>
+                        <td>Mechanical, Membrane</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>Mouse</strong></td>
+                        <td><span class="tag input">Input</span></td>
+                        <td>Enables pointer control and selection on screen</td>
+                        <td>Optical, Laser, Trackball</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>Monitor</strong></td>
+                        <td><span class="tag output">Output</span></td>
+                        <td>Displays visual output from the GPU/CPU</td>
+                        <td>IPS, OLED, TN Panel</td>
+                        <td>Up to 360 Hz, 4K</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>GPU</strong></td>
+                        <td><span class="tag processing">Processing</span></td>
+                        <td>Renders graphics and powers parallel computing tasks</td>
+                        <td>NVIDIA RTX 4090, AMD RX 7900</td>
+                        <td>Up to 82.58 TFLOPS</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><strong>PSU</strong></td>
+                        <td><span class="tag power">Power</span></td>
+                        <td>Converts AC power to regulated DC for all components</td>
+                        <td>Corsair RM850x, EVGA G6</td>
+                        <td>400 W – 1600 W</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><strong>Motherboard</strong></td>
+                        <td><span class="tag board">Board</span></td>
+                        <td>Connects and coordinates all hardware components via buses</td>
+                        <td>ASUS ROG, MSI MEG</td>
+                        <td>ATX / mATX / ITX</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ========== EXTERNAL LINKS / RESOURCES ========== -->
+    <section class="resources-section">
+        <div class="section-header">
+            <h2>Explore Further</h2>
+            <p>Trusted external resources to deepen your hardware knowledge</p>
+        </div>
+        <div class="resources-grid">
+            <a href="https://computer.howstuffworks.com/computer-hardware-channel.htm" target="_blank"
+                rel="noopener noreferrer" class="resource-card" id="ext-link-1">
+                <!-- External Link 1 -->
+                <div class="resource-icon">&#128279;</div>
+                <h3>HowStuffWorks – Hardware</h3>
+                <p>In-depth articles explaining how each piece of computer hardware works in plain English.</p>
+                <span class="resource-url">howstuffworks.com</span>
+            </a>
+            <a href="https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-cpu.html"
+                target="_blank" rel="noopener noreferrer" class="resource-card" id="ext-link-2">
+                <!-- External Link 2 -->
+                <div class="resource-icon">&#128279;</div>
+                <h3>Intel – What is a CPU?</h3>
+                <p>Official Intel guide explaining the Central Processing Unit, its architecture, and how it works.</p>
+                <span class="resource-url">intel.com</span>
+            </a>
+            <a href="https://www.crucial.com/articles/about-memory/what-is-ram" target="_blank"
+                rel="noopener noreferrer" class="resource-card" id="ext-link-3">
+                <div class="resource-icon">&#128279;</div>
+                <h3>Crucial – What is RAM?</h3>
+                <p>A clear explanation of computer memory (RAM) — types, purposes, and how to choose the right one.</p>
+                <span class="resource-url">crucial.com</span>
+            </a>
+            <a href="https://www.geeksforgeeks.org/computer-organization-and-architecture-tutorials/" target="_blank"
+                rel="noopener noreferrer" class="resource-card" id="ext-link-4">
+                <div class="resource-icon">&#128279;</div>
+                <h3>GeeksForGeeks – COA</h3>
+                <p>Comprehensive tutorials on Computer Organization and Architecture for CS students.</p>
+                <span class="resource-url">geeksforgeeks.org</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT US ========== -->
+    <section id="about" class="about-section">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    <strong>TechCore Hub</strong> is an academic project developed by CS students at
+                    <em>COMSATS University Islamabad, Attock Campus</em> as part of the Web Technology
+                    course (Spring 2026). Our mission is to build a comprehensive, free, and easy-to-understand
+                    educational platform dedicated to computer hardware.
+                </p>
+                <p>
+                    We believe every student deserves access to quality learning material. By combining
+                    clear explanations, visual diagrams, and real-world examples, TechCore Hub makes
+                    hardware concepts — that can feel intimidating — approachable and even exciting.
+                </p>
+                <p>
+                    From the fundamentals of binary logic to the inner workings of a modern CPU,
+                    our content is structured to guide beginners and strengthen the knowledge of
+                    advanced learners alike.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <span class="stat-num">12+</span>
+                    <span class="stat-label">Hardware Topics</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">6</span>
+                    <span class="stat-label">Core Modules</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Free Access</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">CS</span>
+                    <span class="stat-label">COMSATS, Attock</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT US ========== -->
+    <section id="contact" class="contact-section">
+        <div class="section-header light">
+            <h2>Contact Us</h2>
+            <p>Have a question, suggestion, or want to contribute content? Reach out!</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="info-icon">&#127979;</span>
+                    <div>
+                        <strong>Institution</strong>
+                        <p>COMSATS University Islamabad, Attock Campus</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#128218;</span>
+                    <div>
+                        <strong>Department</strong>
+                        <p>Department of Computer Science</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#128197;</span>
+                    <div>
+                        <strong>Semester</strong>
+                        <p>Spring 2026 &mdash; CS V</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#9993;</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p>sp24-bcs-033@comsats.edu.pk</p>
+                        <p>sp24-bcs-014@comsats.edu.pk</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleForm(event)" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g: Abdul Basit" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Send Message</button>
+                <p class="form-success" id="formSuccess" style="display:none;">✅ Message sent! Thank you for reaching
+                    out.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-main">TechCore Hub</span>
+                <p>Empowering students with hardware knowledge, one component at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#topics">Topics</a>
+                <a href="#hardware-table">Components</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="footer-links">
+                <h4>External Resources</h4>
+                <a href="https://computer.howstuffworks.com/computer-hardware-channel.htm" target="_blank"
+                    rel="noopener">HowStuffWorks</a>
+                <a href="https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-cpu.html"
+                    target="_blank" rel="noopener">Intel CPU Guide</a>
+                <a href="https://www.crucial.com/articles/about-memory/what-is-ram" target="_blank"
+                    rel="noopener">Crucial – RAM</a>
+                <a href="https://www.geeksforgeeks.org/computer-organization-and-architecture-tutorials/"
+                    target="_blank" rel="noopener">GeeksForGeeks COA</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 TechCore Hub &mdash; COMSATS University Islamabad, Attock Campus. All rights
+            reserved.</p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        /* ------ SLIDER ------ */
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            goToSlide(currentSlide + direction);
+        }
+
+        // Auto-play slider every 4 seconds
+        setInterval(() => changeSlide(1), 4000);
+
+        /* ------ CONTACT FORM ------ */
+        function handleForm(e) {
+            e.preventDefault();
+            document.getElementById('formSuccess').style.display = 'block';
+            e.target.reset();
+            setTimeout(() => {
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 4000);
+        }
+
+        /* ------ SMOOTH SCROLL for nav links ------ */
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Update active nav
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                if (this.classList.contains('nav-link')) this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
