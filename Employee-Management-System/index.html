@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Employee Management System – Manage your workforce efficiently with our powerful HR platform." />
+    <title>Employee Management System | COMSATS Attock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="navbar" id="top">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#top" class="logo-link">
+                <div class="logo">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="44" height="44" rx="12" fill="url(#logoGrad)" />
+                        <rect x="8" y="18" width="28" height="18" rx="3" fill="white" fill-opacity="0.2" />
+                        <rect x="12" y="22" width="6" height="5" rx="1" fill="white" />
+                        <rect x="21" y="22" width="6" height="5" rx="1" fill="white" />
+                        <rect x="19" y="30" width="6" height="6" rx="1" fill="white" fill-opacity="0.9" />
+                        <circle cx="15" cy="12" r="4" fill="white" fill-opacity="0.9" />
+                        <circle cx="29" cy="12" r="4" fill="white" fill-opacity="0.9" />
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1e3a5f" />
+                                <stop offset="1" stop-color="#2563eb" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">EMS <span class="logo-sub">Pro</span></span>
+                </div>
+            </a>
+
+            <!-- Internal Links (required) -->
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#employees" class="nav-link">Employees</a>
+            </nav>
+
+            <a href="#contact" class="btn-primary nav-cta">Get Started</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-badge">🏢 COMSATS University Islamabad – Attock Campus</span>
+            <h1 class="hero-title">Employee Management<br /><span class="gradient-text">System</span></h1>
+            <p class="hero-desc">
+                A modern, all-in-one HR platform to streamline your workforce operations —
+                from recruitment and onboarding to performance tracking and payroll management.
+                Designed for teams that want clarity, efficiency, and control.
+            </p>
+            <div class="hero-actions">
+                <a href="#about" class="btn-primary">Explore System</a>
+                <a href="#employees" class="btn-outline">View Employees</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Employees Managed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">98%</span><span class="stat-label">HR Efficiency</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">System Uptime</span></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="float-card card-1">
+                <span class="card-icon">👤</span>
+                <div><strong>New Employee</strong><br /><small>Asfahan Javed added</small></div>
+            </div>
+            <div class="float-card card-2">
+                <span class="card-icon">📊</span>
+                <div><strong>Performance</strong><br /><small>Q1 Review Complete</small></div>
+            </div>
+            <div class="float-card card-3">
+                <span class="card-icon">💼</span>
+                <div><strong>Payroll</strong><br /><small>March processed</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOCKQUOTE / SLOGAN ===== -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="main-quote">
+                <p>"Great companies are built by great people. Our Employee Management System empowers organizations to
+                    attract, retain, and develop the talent that drives success."</p>
+                <cite>— HR Excellence Initiative, COMSATS University</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ===== IMAGE SLIDER (4 slides) ===== -->
+    <section class="slider-section" id="slider">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our System in Action</h2>
+                <p>See how EMS Pro transforms HR workflows across departments</p>
+            </div>
+
+            <div class="slider-wrapper">
+                <div class="slider" id="slider-track">
+
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <div class="slide-illustration slide-1">
+                            <div class="slide-icon-wrap">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)" />
+                                    <circle cx="40" cy="28" r="12" fill="white" fill-opacity="0.9" />
+                                    <path d="M16 64c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="white" stroke-width="4"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-tag">👥 Employee Profiles</span>
+                            <h3>Centralized Employee Database</h3>
+                            <p>Maintain comprehensive profiles for every employee — including personal info, job title,
+                                department, contact details, and employment history — all in one secure location.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="slide-illustration slide-2">
+                            <div class="slide-icon-wrap">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)" />
+                                    <rect x="16" y="20" width="48" height="36" rx="4" fill="white" fill-opacity="0.2" />
+                                    <rect x="24" y="28" width="32" height="4" rx="2" fill="white" />
+                                    <rect x="24" y="36" width="24" height="4" rx="2" fill="white" fill-opacity="0.7" />
+                                    <rect x="24" y="44" width="20" height="4" rx="2" fill="white" fill-opacity="0.5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-tag">📋 Attendance Tracking</span>
+                            <h3>Real-Time Attendance & Leave Management</h3>
+                            <p>Track daily attendance, manage leave requests, and generate detailed reports. Automated
+                                notifications keep managers and employees aligned on schedules and absences.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <div class="slide-illustration slide-3">
+                            <div class="slide-icon-wrap">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)" />
+                                    <path d="M20 55 L32 40 L40 48 L52 30 L60 38" stroke="white" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="20" cy="55" r="4" fill="white" />
+                                    <circle cx="60" cy="38" r="4" fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-tag">📈 Performance Reviews</span>
+                            <h3>Data-Driven Performance Management</h3>
+                            <p>Set KPIs, conduct periodic reviews, and visualize performance trends. Identify top
+                                performers and provide targeted feedback to help every employee reach their potential.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <div class="slide-illustration slide-4">
+                            <div class="slide-icon-wrap">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)" />
+                                    <rect x="20" y="24" width="40" height="28" rx="5" fill="white" fill-opacity="0.2" />
+                                    <path d="M28 36h8M28 42h16" stroke="white" stroke-width="3"
+                                        stroke-linecap="round" />
+                                    <circle cx="52" cy="52" r="10" fill="#22c55e" />
+                                    <path d="M47 52l3 3 6-6" stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-tag">💰 Payroll Processing</span>
+                            <h3>Automated Payroll & Compensation</h3>
+                            <p>Process salaries, bonuses, and deductions instantly. Generate payslips, manage tax
+                                calculations, and ensure compliance with labor regulations effortlessly.</p>
+                        </div>
+                    </div>
+
+                </div><!-- /slider -->
+
+                <!-- Controls -->
+                <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous slide">&#8249;</button>
+                <button class="slider-btn next-btn" id="nextBtn" aria-label="Next slide">&#8250;</button>
+
+                <!-- Dots -->
+                <div class="slider-dots" id="sliderDots">
+                    <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                    <button class="dot" data-index="3" aria-label="Slide 4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT US SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Our System</h2>
+                <p>Built for modern organizations that value people above all else</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        The <strong>Employee Management System (EMS Pro)</strong> is a comprehensive web-based platform
+                        developed as part of the Web Technology course at COMSATS University Islamabad, Attock Campus.
+                        Our system is designed to solve the real-world challenges faced by HR departments in managing
+                        a growing workforce.
+                    </p>
+                    <p>
+                        From the moment an employee joins the organization to their entire career journey, EMS Pro
+                        handles every touchpoint — onboarding, attendance, performance reviews, payroll, and more.
+                        Our goal is to eliminate paperwork, reduce manual errors, and provide decision-makers with
+                        actionable insights through intuitive dashboards.
+                    </p>
+                    <p>
+                        This project is developed by a dedicated team of Computer Science students committed to
+                        applying modern web technologies to solve practical business problems.
+                    </p>
+                    <!-- External Links (required) -->
+                    <div class="external-links">
+                        <h4>Useful Resources</h4>
+                        <a href="https://www.shrm.org" target="_blank" rel="noopener noreferrer" class="ext-link">
+                            <span>🔗</span> SHRM – Society for Human Resource Management
+                        </a>
+                        <a href="https://www.oracle.com/human-capital-management/" target="_blank"
+                            rel="noopener noreferrer" class="ext-link">
+                            <span>🔗</span> Oracle HCM Cloud – Enterprise HR Solution
+                        </a>
+                        <a href="https://www.sap.com/products/hcm.html" target="_blank" rel="noopener noreferrer"
+                            class="ext-link">
+                            <span>🔗</span> SAP SuccessFactors – HR Software
+                        </a>
+                        <a href="https://comsats.edu.pk" target="_blank" rel="noopener noreferrer" class="ext-link">
+                            <span>🔗</span> COMSATS University Official Website
+                        </a>
+                    </div>
+                </div>
+                <div class="about-features" id="features">
+                    <div class="feature-card">
+                        <div class="feat-icon">🔒</div>
+                        <h4>Secure & Private</h4>
+                        <p>Role-based access control ensures sensitive data is protected at every level.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feat-icon">📱</div>
+                        <h4>Fully Responsive</h4>
+                        <p>Works seamlessly on desktop, tablet, and mobile devices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feat-icon">⚡</div>
+                        <h4>Fast & Reliable</h4>
+                        <p>Optimized for speed with 99.9% uptime guarantee for enterprise use.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feat-icon">📊</div>
+                        <h4>Analytics Dashboard</h4>
+                        <p>Real-time KPIs and charts give HR teams instant workforce insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EMPLOYEE TABLE ===== -->
+    <section class="table-section" id="employees">
+        <div class="container">
+            <div class="section-header">
+                <h2>Employee Directory</h2>
+                <p>Current project team and department assignments</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="emp-table" id="empTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Registration No.</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Semester</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="row-num">01</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-1">AJ</div>
+                                    <div>
+                                        <strong>Asfahan Javed</strong>
+                                        <small>asfahan.javed@student.comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>FA22-BCS-XXX</code></td>
+                            <td>Computer Science</td>
+                            <td><span class="role-badge role-lead">Team Lead</span></td>
+                            <td>Spring 2026 – V</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="row-num">02</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-2">BA</div>
+                                    <div>
+                                        <strong>Basit Ali Raza</strong>
+                                        <small>basit.ali@student.comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>FA22-BCS-XXX</code></td>
+                            <td>Computer Science</td>
+                            <td><span class="role-badge role-dev">Frontend Dev</span></td>
+                            <td>Spring 2026 – V</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="row-num">03</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-3">AL</div>
+                                    <div>
+                                        <strong>Ali Lehrasab</strong>
+                                        <small>ali.lehrasab@student.comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>FA22-BCS-XXX</code></td>
+                            <td>Computer Science</td>
+                            <td><span class="role-badge role-des">UI Designer</span></td>
+                            <td>Spring 2026 – V</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                        </tr>
+                        <!-- Additional sample rows -->
+                        <tr>
+                            <td><span class="row-num">04</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-4">SA</div>
+                                    <div>
+                                        <strong>Sara Ahmed</strong>
+                                        <small>sara.ahmed@comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>EMP-2024-004</code></td>
+                            <td>Human Resources</td>
+                            <td><span class="role-badge role-hr">HR Manager</span></td>
+                            <td>—</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="row-num">05</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-5">MK</div>
+                                    <div>
+                                        <strong>Muhammad Khan</strong>
+                                        <small>m.khan@comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>EMP-2024-005</code></td>
+                            <td>IT Department</td>
+                            <td><span class="role-badge role-dev">System Admin</span></td>
+                            <td>—</td>
+                            <td><span class="status-badge status-leave">On Leave</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="row-num">06</span></td>
+                            <td>
+                                <div class="emp-name-cell">
+                                    <div class="avatar av-6">ZN</div>
+                                    <div>
+                                        <strong>Zainab Noor</strong>
+                                        <small>z.noor@comsats.edu.pk</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><code>EMP-2024-006</code></td>
+                            <td>Finance</td>
+                            <td><span class="role-badge role-fin">Accountant</span></td>
+                            <td>—</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table Search -->
+            <div class="table-controls">
+                <input type="text" id="searchInput" placeholder="🔍  Search employees..." class="search-input" />
+                <span class="table-count" id="tableCount">Showing 6 employees</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECOND BLOCKQUOTE ===== -->
+    <section class="quote-section quote-dark">
+        <div class="container">
+            <blockquote class="main-quote dark-quote">
+                <p>"An employee management system isn't just software — it's the backbone of every thriving
+                    organization. Invest in your people, and they will invest in your vision."</p>
+                <cite>— Dr. Tariq Jamil, Head of Department CS, COMSATS Attock</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Reach out to our team for any queries or support</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <span class="c-icon">📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p>COMSATS University Islamabad, Attock Campus,<br />Kamra Road, Attock, Punjab, Pakistan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>cs-department@cuiatk.edu.pk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+92 57 2610410</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">🎓</span>
+                        <div>
+                            <strong>Course</strong>
+                            <p>Web Technology – CS V, Spring 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary submit-btn" id="submitBtn">Send Message ✉️</button>
+                    <div id="formMsg" class="form-success" style="display:none;">✅ Message sent successfully! We'll get
+                        back to you soon.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+                            <rect width="44" height="44" rx="12" fill="url(#fLogoGrad)" />
+                            <rect x="8" y="18" width="28" height="18" rx="3" fill="white" fill-opacity="0.2" />
+                            <rect x="12" y="22" width="6" height="5" rx="1" fill="white" />
+                            <rect x="21" y="22" width="6" height="5" rx="1" fill="white" />
+                            <rect x="19" y="30" width="6" height="6" rx="1" fill="white" fill-opacity="0.9" />
+                            <circle cx="15" cy="12" r="4" fill="white" fill-opacity="0.9" />
+                            <circle cx="29" cy="12" r="4" fill="white" fill-opacity="0.9" />
+                            <defs>
+                                <linearGradient id="fLogoGrad" x1="0" y1="0" x2="44" y2="44"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#1e3a5f" />
+                                    <stop offset="1" stop-color="#2563eb" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="logo-text">EMS <span class="logo-sub">Pro</span></span>
+                    </div>
+                    <p>A Web Technology Assignment Project by CS-V students at COMSATS University Islamabad, Attock
+                        Campus.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <a href="#top">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#employees">Employees</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h5>External Resources</h5>
+                    <a href="https://www.shrm.org" target="_blank" rel="noopener">SHRM HR Management</a>
+                    <a href="https://www.oracle.com/human-capital-management/" target="_blank" rel="noopener">Oracle
+                        HCM</a>
+                    <a href="https://www.sap.com/products/hcm.html" target="_blank" rel="noopener">SAP
+                        SuccessFactors</a>
+                    <a href="https://comsats.edu.pk" target="_blank" rel="noopener">COMSATS University</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Our Team</h5>
+                    <p>👤 Asfahan Javed</p>
+                    <p>👤 Basit Ali Raza</p>
+                    <p>👤 Ali Lehrasab</p>
+                    <p style="margin-top:8px; font-size:0.8rem; opacity:0.6;">Lab Assignment 1 | Spring 2026</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Employee Management System — COMSATS University Islamabad, Attock Campus | Department of
+                    Computer Science</p>
+                <p>Web Technology – CS-V | Lab Assignment 1 | Deadline: 2nd March 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
