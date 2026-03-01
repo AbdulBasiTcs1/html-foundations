@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory - Computer Hardware Learning</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #222;">
+
+    <!-- HEADER -->
+    <header
+        style="background-color: #1a3c6e; color: white; padding: 15px 30px; display: flex; align-items: center; gap: 15px;">
+        <img src="logo.png" alt="CHL Logo" style="height: 60px; border-radius: 8px;" />
+        <div>
+            <h1 style="margin: 0; font-size: 26px;">Computer Hardware Learning</h1>
+            <p style="margin: 4px 0 0; font-size: 14px; color: #aac4e8;">Your beginner's guide to computer hardware</p>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav style="background-color: #2a5298; padding: 10px 30px;">
+        <a href="index.html" style="color: white; text-decoration: none; margin-right: 18px;">Home</a>
+        <a href="input-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Input Devices</a>
+        <a href="output-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Output
+            Devices</a>
+        <a href="cpu.html" style="color: white; text-decoration: none; margin-right: 18px;">CPU &amp; ALU</a>
+        <a href="memory.html"
+            style="color: white; text-decoration: none; margin-right: 18px; font-weight: bold;">Memory</a>
+        <a href="storage.html" style="color: white; text-decoration: none; margin-right: 18px;">Storage</a>
+        <a href="motherboard.html" style="color: white; text-decoration: none; margin-right: 18px;">Motherboard</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin-right: 18px;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main style="max-width: 960px; margin: 30px auto; padding: 0 20px;">
+
+        <h2 style="color: #1a3c6e; font-size: 28px;">💾 Memory (RAM &amp; ROM)</h2>
+
+        <!-- Intro -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">What is Computer Memory?</h3>
+            <p style="line-height: 1.7; font-size: 15px;">
+                <strong>Computer memory</strong> is hardware that stores data and instructions for the CPU to access.
+                There are two main types of memory: <strong>RAM</strong> (temporary, fast) and <strong>ROM</strong>
+                (permanent, read-only).
+                Memory is different from storage — memory (RAM) loses its data when the computer is turned off, while
+                storage (Hard Disk, SSD) keeps data permanently.
+            </p>
+            <blockquote
+                style="border-left: 5px solid #1a3c6e; margin: 15px 0 0; padding: 12px 18px; background-color: #eef3fb; font-style: italic; color: #333;">
+                "RAM is like your desk — you put things on it while you work. ROM is like a printed manual — it's always
+                there and you can only read it."
+            </blockquote>
+        </section>
+
+        <!-- Slider -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Types of Memory</h3>
+            <div style="position: relative; width: 100%; overflow: hidden; border-radius: 8px; border: 2px solid #ddd;">
+                <div id="ms1"
+                    style="display: block; text-align: center; padding: 35px 20px; background-color: #dce8f8;">
+                    <p style="font-size: 55px; margin: 0;">🟦</p>
+                    <h3 style="color: #1a3c6e;">RAM – Random Access Memory</h3>
+                    <p style="font-size: 14px; color: #444;">Temporary memory. Fast. Loses data when powered off. Used
+                        while running programs.</p>
+                </div>
+                <div id="ms2" style="display: none; text-align: center; padding: 35px 20px; background-color: #d4edda;">
+                    <p style="font-size: 55px; margin: 0;">🟩</p>
+                    <h3 style="color: #155724;">ROM – Read Only Memory</h3>
+                    <p style="font-size: 14px; color: #444;">Permanent memory. Cannot be changed easily. Stores the BIOS
+                        that starts up the computer.</p>
+                </div>
+                <div id="ms3" style="display: none; text-align: center; padding: 35px 20px; background-color: #fef9e7;">
+                    <p style="font-size: 55px; margin: 0;">🟨</p>
+                    <h3 style="color: #7d5a00;">Cache Memory</h3>
+                    <p style="font-size: 14px; color: #444;">Very fast, very small memory inside the CPU. Stores
+                        recently used data for quick re-access.</p>
+                </div>
+                <div id="ms4" style="display: none; text-align: center; padding: 35px 20px; background-color: #f3e5f5;">
+                    <p style="font-size: 55px; margin: 0;">🟪</p>
+                    <h3 style="color: #4a148c;">Virtual Memory</h3>
+                    <p style="font-size: 14px; color: #444;">Part of the hard disk used as extra RAM when physical RAM
+                        is full. It is slower than actual RAM.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 12px;">
+                <button onclick="showMS(1)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">RAM</button>
+                <button onclick="showMS(2)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">ROM</button>
+                <button onclick="showMS(3)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Cache</button>
+                <button onclick="showMS(4)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Virtual</button>
+            </div>
+        </section>
+
+        <!-- RAM vs ROM Table -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">RAM vs ROM – Comparison Table</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Feature</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">RAM</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">ROM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Full Name</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Random Access Memory</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Read Only Memory</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Data Retention</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Loses data when powered off (Volatile)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Keeps data even when off (Non-Volatile)</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Can be Written</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Yes (read and write)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Mostly No (read only)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Speed</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Very fast</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Slower than RAM</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Capacity</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">4 GB to 128 GB (modern PCs)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Small (few MB for BIOS)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cost</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">More expensive</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Less expensive</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Usage</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Running programs and OS</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Storing BIOS/boot firmware</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Examples</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">DDR4, DDR5</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">BIOS Chip, Firmware</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Details -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Detailed Descriptions</h3>
+
+            <h4 style="color: #2a5298;">RAM (Random Access Memory)</h4>
+            <p style="line-height: 1.7;">RAM is the main memory used by the computer while it is running. When you open
+                an application like a web browser or a game, it is loaded from storage into RAM so the CPU can access it
+                quickly. More RAM means you can run more programs at the same time without slowing down. Modern
+                computers use <strong>DDR4</strong> or <strong>DDR5</strong> RAM.</p>
+
+            <h4 style="color: #2a5298;">ROM (Read Only Memory)</h4>
+            <p style="line-height: 1.7;">ROM stores the <strong>BIOS</strong> (Basic Input Output System) — a small
+                program that starts the computer when you press the power button. It checks all hardware, then loads the
+                operating system. Unlike RAM, ROM does not lose its data when the computer is turned off.</p>
+
+            <h4 style="color: #2a5298;">Cache Memory</h4>
+            <p style="line-height: 1.7;">Cache is ultra-fast memory located inside or very close to the CPU. It stores
+                copies of recently used data so the CPU does not have to go all the way to RAM to find it. Cache is
+                organized in levels: <strong>L1</strong> (smallest, fastest), <strong>L2</strong>, and
+                <strong>L3</strong> (largest, slightly slower).</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1a3c6e; color: #aac4e8; text-align: center; padding: 15px; font-size: 13px;">
+        <p style="margin: 0;">&copy; 2026 Computer Hardware Learning (CHL) | COMSATS University Islamabad, Attock Campus
+        </p>
+        <p style="margin: 5px 0 0;">
+            <a href="about.html" style="color: #aac4e8; text-decoration: none; margin-right: 15px;">About Us</a>
+            <a href="contact.html" style="color: #aac4e8; text-decoration: none;">Contact Us</a>
+        </p>
+    </footer>
+
+    <script>
+        var curMS = 1;
+        function showMS(n) {
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("ms" + i).style.display = "none";
+            }
+            document.getElementById("ms" + n).style.display = "block";
+            curMS = n;
+        }
+        setInterval(function () {
+            var next = curMS + 1;
+            if (next > 4) next = 1;
+            showMS(next);
+        }, 3000);
+    </script>
+
+</body>
+
+</html>

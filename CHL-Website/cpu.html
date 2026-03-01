@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU &amp; ALU - Computer Hardware Learning</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #222;">
+
+    <!-- HEADER -->
+    <header
+        style="background-color: #1a3c6e; color: white; padding: 15px 30px; display: flex; align-items: center; gap: 15px;">
+        <img src="logo.png" alt="CHL Logo" style="height: 60px; border-radius: 8px;" />
+        <div>
+            <h1 style="margin: 0; font-size: 26px;">Computer Hardware Learning</h1>
+            <p style="margin: 4px 0 0; font-size: 14px; color: #aac4e8;">Your beginner's guide to computer hardware</p>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav style="background-color: #2a5298; padding: 10px 30px;">
+        <a href="index.html" style="color: white; text-decoration: none; margin-right: 18px;">Home</a>
+        <a href="input-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Input Devices</a>
+        <a href="output-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Output
+            Devices</a>
+        <a href="cpu.html" style="color: white; text-decoration: none; margin-right: 18px; font-weight: bold;">CPU &amp;
+            ALU</a>
+        <a href="memory.html" style="color: white; text-decoration: none; margin-right: 18px;">Memory</a>
+        <a href="storage.html" style="color: white; text-decoration: none; margin-right: 18px;">Storage</a>
+        <a href="motherboard.html" style="color: white; text-decoration: none; margin-right: 18px;">Motherboard</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin-right: 18px;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main style="max-width: 960px; margin: 30px auto; padding: 0 20px;">
+
+        <h2 style="color: #1a3c6e; font-size: 28px;">🧠 CPU &amp; ALU</h2>
+
+        <!-- CPU Intro -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">What is the CPU?</h3>
+            <p style="line-height: 1.7; font-size: 15px;">
+                The <strong>CPU (Central Processing Unit)</strong> is the most important component of a computer.
+                It is often called the <em>"brain of the computer"</em> because it performs all calculations and
+                executes all instructions given by software. Every program you run — from opening a file to playing
+                a game — is processed by the CPU. Modern CPUs are very small chips but contain billions of tiny
+                transistors.
+            </p>
+            <p style="line-height: 1.7; font-size: 15px;">
+                The CPU follows a simple cycle called the <strong>Fetch-Decode-Execute cycle</strong>:
+            </p>
+            <ul style="font-size: 15px; line-height: 2;">
+                <li><strong>Fetch</strong> — The CPU fetches the next instruction from memory (RAM).</li>
+                <li><strong>Decode</strong> — The CPU decodes the instruction to understand what to do.</li>
+                <li><strong>Execute</strong> — The CPU carries out the instruction (e.g., add two numbers).</li>
+            </ul>
+            <blockquote
+                style="border-left: 5px solid #1a3c6e; margin: 15px 0 0; padding: 12px 18px; background-color: #eef3fb; font-style: italic; color: #333;">
+                "The CPU is the brain of the computer — every single operation the computer performs passes through it."
+            </blockquote>
+        </section>
+
+        <!-- Image Slider -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Parts of the CPU</h3>
+            <div style="position: relative; width: 100%; overflow: hidden; border-radius: 8px; border: 2px solid #ddd;">
+                <div id="cs1"
+                    style="display: block; text-align: center; padding: 35px 20px; background-color: #dce8f8;">
+                    <p style="font-size: 55px; margin: 0;">🧮</p>
+                    <h3 style="color: #1a3c6e;">ALU – Arithmetic Logic Unit</h3>
+                    <p style="font-size: 14px; color: #444;">Performs all math (+, -, ×, ÷) and logical operations (AND,
+                        OR, NOT) inside the CPU.</p>
+                </div>
+                <div id="cs2" style="display: none; text-align: center; padding: 35px 20px; background-color: #d4edda;">
+                    <p style="font-size: 55px; margin: 0;">🎛️</p>
+                    <h3 style="color: #155724;">Control Unit (CU)</h3>
+                    <p style="font-size: 14px; color: #444;">Directs all operations of the CPU. It tells the ALU what to
+                        do and manages data flow.</p>
+                </div>
+                <div id="cs3" style="display: none; text-align: center; padding: 35px 20px; background-color: #fef9e7;">
+                    <p style="font-size: 55px; margin: 0;">📦</p>
+                    <h3 style="color: #7d5a00;">Registers</h3>
+                    <p style="font-size: 14px; color: #444;">Very fast, tiny storage locations inside the CPU used to
+                        temporarily hold data being processed.</p>
+                </div>
+                <div id="cs4" style="display: none; text-align: center; padding: 35px 20px; background-color: #f3e5f5;">
+                    <p style="font-size: 55px; margin: 0;">⚡</p>
+                    <h3 style="color: #4a148c;">Clock Speed</h3>
+                    <p style="font-size: 14px; color: #444;">Measured in GHz (Gigahertz). A higher clock speed means the
+                        CPU can process more instructions per second.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 12px;">
+                <button onclick="showCS(1)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">ALU</button>
+                <button onclick="showCS(2)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Control
+                    Unit</button>
+                <button onclick="showCS(3)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Registers</button>
+                <button onclick="showCS(4)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Clock
+                    Speed</button>
+            </div>
+        </section>
+
+        <!-- ALU Detail -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">What is the ALU (Arithmetic Logic Unit)?</h3>
+            <p style="line-height: 1.7; font-size: 15px;">
+                The <strong>ALU</strong> is a part of the CPU that performs two types of operations:
+            </p>
+            <ul style="font-size: 15px; line-height: 2;">
+                <li><strong>Arithmetic Operations:</strong> Addition, Subtraction, Multiplication, Division</li>
+                <li><strong>Logical Operations:</strong> AND, OR, NOT, XOR (used for comparisons and decisions)</li>
+            </ul>
+            <p style="line-height: 1.7; font-size: 15px;">
+                Every time you add numbers, compare values, or make a decision in a program, the ALU is doing that work.
+                The result of ALU operations is either stored back in a register or sent to memory.
+            </p>
+        </section>
+
+        <!-- Table -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">CPU Components – Summary Table</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Component</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Full Name</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">ALU</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Arithmetic Logic Unit</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Performs math and logical operations</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">CU</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Control Unit</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Controls the flow of data and operations in
+                            the CPU</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Registers</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">CPU Registers</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Extremely fast temporary storage inside the
+                            CPU</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cache</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">CPU Cache (L1, L2, L3)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Fast memory between CPU and RAM to speed up
+                            access</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Clock</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">CPU Clock</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Synchronizes all operations; measured in GHz
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cores</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Processing Cores</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Multi-core CPUs can run multiple tasks at the
+                            same time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Popular CPUs -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Popular CPU Brands</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc;">Brand</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Example Model</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Cores</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Common Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Intel</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Core i7-13700K</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">16 Cores</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Gaming, Video Editing</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">AMD</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Ryzen 9 7900X</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">12 Cores</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Workstation, Gaming</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Apple</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">M3 Pro</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">12 Cores</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">MacBook, Mac Studio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1a3c6e; color: #aac4e8; text-align: center; padding: 15px; font-size: 13px;">
+        <p style="margin: 0;">&copy; 2026 Computer Hardware Learning (CHL) | COMSATS University Islamabad, Attock Campus
+        </p>
+        <p style="margin: 5px 0 0;">
+            <a href="about.html" style="color: #aac4e8; text-decoration: none; margin-right: 15px;">About Us</a>
+            <a href="contact.html" style="color: #aac4e8; text-decoration: none;">Contact Us</a>
+        </p>
+    </footer>
+
+    <script>
+        var curCS = 1;
+        function showCS(n) {
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("cs" + i).style.display = "none";
+            }
+            document.getElementById("cs" + n).style.display = "block";
+            curCS = n;
+        }
+        setInterval(function () {
+            var next = curCS + 1;
+            if (next > 4) next = 1;
+            showCS(next);
+        }, 3000);
+    </script>
+
+</body>
+
+</html>

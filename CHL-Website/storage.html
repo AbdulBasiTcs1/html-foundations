@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage Devices - Computer Hardware Learning</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #222;">
+
+    <!-- HEADER -->
+    <header
+        style="background-color: #1a3c6e; color: white; padding: 15px 30px; display: flex; align-items: center; gap: 15px;">
+        <img src="logo.png" alt="CHL Logo" style="height: 60px; border-radius: 8px;" />
+        <div>
+            <h1 style="margin: 0; font-size: 26px;">Computer Hardware Learning</h1>
+            <p style="margin: 4px 0 0; font-size: 14px; color: #aac4e8;">Your beginner's guide to computer hardware</p>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav style="background-color: #2a5298; padding: 10px 30px;">
+        <a href="index.html" style="color: white; text-decoration: none; margin-right: 18px;">Home</a>
+        <a href="input-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Input Devices</a>
+        <a href="output-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Output
+            Devices</a>
+        <a href="cpu.html" style="color: white; text-decoration: none; margin-right: 18px;">CPU &amp; ALU</a>
+        <a href="memory.html" style="color: white; text-decoration: none; margin-right: 18px;">Memory</a>
+        <a href="storage.html"
+            style="color: white; text-decoration: none; margin-right: 18px; font-weight: bold;">Storage</a>
+        <a href="motherboard.html" style="color: white; text-decoration: none; margin-right: 18px;">Motherboard</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin-right: 18px;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main style="max-width: 960px; margin: 30px auto; padding: 0 20px;">
+
+        <h2 style="color: #1a3c6e; font-size: 28px;">💿 Storage Devices</h2>
+
+        <!-- Intro -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">What is a Storage Device?</h3>
+            <p style="line-height: 1.7; font-size: 15px;">
+                A <strong>storage device</strong> is hardware that permanently saves your data — even when the computer
+                is turned off.
+                This is different from RAM (memory), which loses data when powered off. Storage devices hold your
+                operating system,
+                software applications, documents, photos, videos, and all your files. The two main types are
+                <strong>HDD (Hard Disk Drive)</strong> and <strong>SSD (Solid State Drive)</strong>.
+            </p>
+            <blockquote
+                style="border-left: 5px solid #1a3c6e; margin: 15px 0 0; padding: 12px 18px; background-color: #eef3fb; font-style: italic; color: #333;">
+                "Storage is the long-term memory of a computer — it holds your data safely even when the power goes
+                off."
+            </blockquote>
+        </section>
+
+        <!-- Slider -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Types of Storage Devices</h3>
+            <div style="position: relative; width: 100%; overflow: hidden; border-radius: 8px; border: 2px solid #ddd;">
+                <div id="ss1"
+                    style="display: block; text-align: center; padding: 35px 20px; background-color: #dce8f8;">
+                    <p style="font-size: 55px; margin: 0;">🖴</p>
+                    <h3 style="color: #1a3c6e;">HDD – Hard Disk Drive</h3>
+                    <p style="font-size: 14px; color: #444;">Traditional spinning disk storage. Large capacity,
+                        affordable, but slower than SSD.</p>
+                </div>
+                <div id="ss2" style="display: none; text-align: center; padding: 35px 20px; background-color: #d4edda;">
+                    <p style="font-size: 55px; margin: 0;">⚡</p>
+                    <h3 style="color: #155724;">SSD – Solid State Drive</h3>
+                    <p style="font-size: 14px; color: #444;">Fast, no moving parts, more durable. Makes computers boot
+                        and load much faster than HDD.</p>
+                </div>
+                <div id="ss3" style="display: none; text-align: center; padding: 35px 20px; background-color: #fef9e7;">
+                    <p style="font-size: 55px; margin: 0;">🔌</p>
+                    <h3 style="color: #7d5a00;">USB Flash Drive</h3>
+                    <p style="font-size: 14px; color: #444;">Portable storage device that plugs into a USB port. Used
+                        for transferring files between computers.</p>
+                </div>
+                <div id="ss4" style="display: none; text-align: center; padding: 35px 20px; background-color: #f3e5f5;">
+                    <p style="font-size: 55px; margin: 0;">☁️</p>
+                    <h3 style="color: #4a148c;">Cloud Storage</h3>
+                    <p style="font-size: 14px; color: #444;">Stores data on remote servers over the internet. Examples:
+                        Google Drive, OneDrive, Dropbox.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 12px;">
+                <button onclick="showSS(1)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">HDD</button>
+                <button onclick="showSS(2)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">SSD</button>
+                <button onclick="showSS(3)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">USB
+                    Drive</button>
+                <button onclick="showSS(4)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Cloud</button>
+            </div>
+        </section>
+
+        <!-- HDD vs SSD Table -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">HDD vs SSD – Comparison Table</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Feature</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">HDD</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">SSD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Technology</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Spinning magnetic disk</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Flash memory chips (no moving parts)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Speed</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Slower (80-160 MB/s)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Very fast (500–7000 MB/s)</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Durability</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Less durable (moving parts can break)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">More durable (no moving parts)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Capacity</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Very large (up to 20 TB)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Smaller but growing (up to 8 TB commonly)
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Price per GB</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cheaper</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">More expensive, but price dropping</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Noise</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Makes noise when spinning</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Silent (no mechanical parts)</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Power Usage</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Uses more power</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Uses less power (better for laptops)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Best For</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Large backups, bulk storage</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">OS drive, gaming, fast performance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Other Storage Devices Table -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Other Storage Devices</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc;">Device</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Capacity</th>
+                        <th style="padding: 10px; border: 1px solid #ccc;">Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">USB Flash Drive (Pen Drive)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">4 GB – 1 TB</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Portable file transfer</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">SD Card</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">4 GB – 1 TB</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cameras, phones</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Optical Disc (CD/DVD/Blu-ray)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">700 MB – 100 GB</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Software distribution, movies</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Cloud Storage</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Unlimited (paid)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Online backup, file sharing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1a3c6e; color: #aac4e8; text-align: center; padding: 15px; font-size: 13px;">
+        <p style="margin: 0;">&copy; 2026 Computer Hardware Learning (CHL) | COMSATS University Islamabad, Attock Campus
+        </p>
+        <p style="margin: 5px 0 0;">
+            <a href="about.html" style="color: #aac4e8; text-decoration: none; margin-right: 15px;">About Us</a>
+            <a href="contact.html" style="color: #aac4e8; text-decoration: none;">Contact Us</a>
+        </p>
+    </footer>
+
+    <script>
+        var curSS = 1;
+        function showSS(n) {
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("ss" + i).style.display = "none";
+            }
+            document.getElementById("ss" + n).style.display = "block";
+            curSS = n;
+        }
+        setInterval(function () {
+            var next = curSS + 1;
+            if (next > 4) next = 1;
+            showSS(next);
+        }, 3000);
+    </script>
+
+</body>
+
+</html>

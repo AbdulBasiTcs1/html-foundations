@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Output Devices - Computer Hardware Learning</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #222;">
+
+    <!-- HEADER -->
+    <header
+        style="background-color: #1a3c6e; color: white; padding: 15px 30px; display: flex; align-items: center; gap: 15px;">
+        <img src="logo.png" alt="CHL Logo" style="height: 60px; border-radius: 8px;" />
+        <div>
+            <h1 style="margin: 0; font-size: 26px;">Computer Hardware Learning</h1>
+            <p style="margin: 4px 0 0; font-size: 14px; color: #aac4e8;">Your beginner's guide to computer hardware</p>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav style="background-color: #2a5298; padding: 10px 30px;">
+        <a href="index.html" style="color: white; text-decoration: none; margin-right: 18px;">Home</a>
+        <a href="input-devices.html" style="color: white; text-decoration: none; margin-right: 18px;">Input Devices</a>
+        <a href="output-devices.html"
+            style="color: white; text-decoration: none; margin-right: 18px; font-weight: bold;">Output Devices</a>
+        <a href="cpu.html" style="color: white; text-decoration: none; margin-right: 18px;">CPU &amp; ALU</a>
+        <a href="memory.html" style="color: white; text-decoration: none; margin-right: 18px;">Memory</a>
+        <a href="storage.html" style="color: white; text-decoration: none; margin-right: 18px;">Storage</a>
+        <a href="motherboard.html" style="color: white; text-decoration: none; margin-right: 18px;">Motherboard</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin-right: 18px;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main style="max-width: 960px; margin: 30px auto; padding: 0 20px;">
+
+        <h2 style="color: #1a3c6e; font-size: 28px;">🖥️ Output Devices</h2>
+
+        <!-- Intro -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">What is an Output Device?</h3>
+            <p style="line-height: 1.7; font-size: 15px;">
+                An <strong>output device</strong> is any hardware component that receives data FROM the computer and
+                presents it
+                to the user in a form that humans can understand — whether visual (monitor), sound (speakers), or
+                physical (printer).
+                After the CPU processes data, the result is sent to an output device so the user can see or hear the
+                result.
+            </p>
+            <blockquote
+                style="border-left: 5px solid #1a3c6e; margin: 15px 0 0; padding: 12px 18px; background-color: #eef3fb; font-style: italic; color: #333;">
+                "Without output devices, the computer would be like a person who thinks but never speaks."
+            </blockquote>
+        </section>
+
+        <!-- Image Slider -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Examples of Output Devices</h3>
+            <div style="position: relative; width: 100%; overflow: hidden; border-radius: 8px; border: 2px solid #ddd;">
+                <div id="os1"
+                    style="display: block; text-align: center; padding: 35px 20px; background-color: #dce8f8;">
+                    <p style="font-size: 55px; margin: 0;">🖥️</p>
+                    <h3 style="color: #1a3c6e;">Monitor</h3>
+                    <p style="font-size: 14px; color: #444;">Displays video and graphics output from the computer. The
+                        most essential output device.</p>
+                </div>
+                <div id="os2" style="display: none; text-align: center; padding: 35px 20px; background-color: #d4edda;">
+                    <p style="font-size: 55px; margin: 0;">🖨️</p>
+                    <h3 style="color: #155724;">Printer</h3>
+                    <p style="font-size: 14px; color: #444;">Produces hard copies of documents and images on paper or
+                        other media.</p>
+                </div>
+                <div id="os3" style="display: none; text-align: center; padding: 35px 20px; background-color: #fef9e7;">
+                    <p style="font-size: 55px; margin: 0;">🔊</p>
+                    <h3 style="color: #7d5a00;">Speakers</h3>
+                    <p style="font-size: 14px; color: #444;">Convert digital audio signals into sound waves that humans
+                        can hear.</p>
+                </div>
+                <div id="os4" style="display: none; text-align: center; padding: 35px 20px; background-color: #f3e5f5;">
+                    <p style="font-size: 55px; margin: 0;">📽️</p>
+                    <h3 style="color: #4a148c;">Projector</h3>
+                    <p style="font-size: 14px; color: #444;">Projects computer output onto a large screen or wall, used
+                        in classrooms and presentations.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 12px;">
+                <button onclick="showOS(1)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Monitor</button>
+                <button onclick="showOS(2)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Printer</button>
+                <button onclick="showOS(3)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Speakers</button>
+                <button onclick="showOS(4)"
+                    style="margin: 4px; padding: 8px 16px; background-color: #1a3c6e; color: white; border: none; border-radius: 4px; cursor: pointer;">Projector</button>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Output Devices – Comparison Table</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                <thead>
+                    <tr style="background-color: #1a3c6e; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Device</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Output Type</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">How It Works</th>
+                        <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Common Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Monitor</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Visual</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Pixels lit up by LCD, LED or OLED panels</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Displaying everything on screen</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Printer</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Physical (Hard Copy)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Inkjet sprays ink; Laser uses heat and toner
+                        </td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Printing documents and photos</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Speakers</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Audio</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Converts electrical signals into sound
+                            vibrations</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Music, videos, alerts</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Projector</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Visual (Large Screen)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Projects light through a lens onto a surface
+                        </td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Presentations, cinema</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 10px; border: 1px solid #ccc;">Headphones</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Audio (Personal)</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Same as speakers but worn on ears</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Private listening</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Plotter</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Physical Drawing</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Draws precise lines using pens controlled by
+                            the computer</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Engineering drawings, blueprints</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Descriptions -->
+        <section
+            style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 25px;">
+            <h3 style="color: #1a3c6e;">Detailed Descriptions</h3>
+
+            <h4 style="color: #2a5298;">1. Monitor</h4>
+            <p style="line-height: 1.7;">The monitor is the most important output device. It displays everything — text,
+                images, videos, and the graphical user interface. Modern monitors use <strong>LCD</strong> (Liquid
+                Crystal Display), <strong>LED</strong>, or <strong>OLED</strong> technology. Screen quality is measured
+                in resolution (e.g., 1920×1080 Full HD) and refresh rate (Hz).</p>
+
+            <h4 style="color: #2a5298;">2. Printer</h4>
+            <p style="line-height: 1.7;">A printer produces a <strong>hard copy</strong> (physical copy) of digital
+                documents. <strong>Inkjet printers</strong> spray tiny dots of ink and are suitable for photos.
+                <strong>Laser printers</strong> use toner powder and are faster and cheaper for large volume printing.
+            </p>
+
+            <h4 style="color: #2a5298;">3. Speakers</h4>
+            <p style="line-height: 1.7;">Speakers receive electrical audio signals from the computer's sound card and
+                convert them into sound that we can hear. They are used for music, videos, system alerts, and voice
+                communication. Headphones work the same way but are worn on the ears for private listening.</p>
+
+            <h4 style="color: #2a5298;">4. Projector</h4>
+            <p style="line-height: 1.7;">A projector takes the computer's video output and projects it onto a large
+                surface (wall or screen). Used in <strong>classrooms, conferences, and cinemas</strong>. Modern
+                projectors use <strong>DLP</strong> (Digital Light Processing) or <strong>LCD</strong> technology.</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1a3c6e; color: #aac4e8; text-align: center; padding: 15px; font-size: 13px;">
+        <p style="margin: 0;">&copy; 2026 Computer Hardware Learning (CHL) | COMSATS University Islamabad, Attock Campus
+        </p>
+        <p style="margin: 5px 0 0;">
+            <a href="about.html" style="color: #aac4e8; text-decoration: none; margin-right: 15px;">About Us</a>
+            <a href="contact.html" style="color: #aac4e8; text-decoration: none;">Contact Us</a>
+        </p>
+    </footer>
+
+    <script>
+        var curOS = 1;
+        function showOS(n) {
+            for (var i = 1; i <= 4; i++) {
+                document.getElementById("os" + i).style.display = "none";
+            }
+            document.getElementById("os" + n).style.display = "block";
+            curOS = n;
+        }
+        setInterval(function () {
+            var next = curOS + 1;
+            if (next > 4) next = 1;
+            showOS(next);
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
