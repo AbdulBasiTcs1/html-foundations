@@ -1,162 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hardware Hub - Learn Computer Hardware</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #005599;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: yellow;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            background-color: white;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #003366;
-            color: white;
-        }
-
-        .images {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .images img {
-            width: 200px;
-            height: 150px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-
-        blockquote {
-            text-align: center;
-            font-style: italic;
-            margin-top: 20px;
-            color: darkblue;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
-<body>
-
+<!-- HTML5 Semantic Structure Example -->
 <header>
-    <h1>Hardware Hub</h1>
-    <p>Learn the Fundamentals of Computer Hardware</p>
+    <nav>
+        <a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a>
+    </nav>
 </header>
-
-<nav>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="https://www.intel.com" target="_blank">Intel</a>
-    <a href="https://www.amd.com" target="_blank">AMD</a>
-</nav>
-
-<div class="container">
-    <h2>Introduction</h2>
-    <p>
-        Welcome to Hardware Hub. This website is designed to help students understand
-        the basic components of computer hardware such as CPU, RAM, storage devices,
-        and motherboard. Our goal is to make hardware learning simple and interactive.
-    </p>
-
-    <h2>Hardware Components Table</h2>
-
-    <table>
-        <tr>
-            <th>Component</th>
-            <th>Function</th>
-            <th>Example</th>
-        </tr>
-
-        <tr>
-            <td>CPU</td>
-            <td>Brain of the Computer</td>
-            <td>Intel Core i5</td>
-        </tr>
-
-        <tr>
-            <td>RAM</td>
-            <td>Temporary Memory</td>
-            <td>8GB DDR4</td>
-        </tr>
-
-        <tr>
-            <td>Hard Disk</td>
-            <td>Permanent Storage</td>
-            <td>1TB HDD</td>
-        </tr>
-
-        <tr>
-            <td>Motherboard</td>
-            <td>Main Circuit Board</td>
-            <td>ASUS Prime</td>
-        </tr>
-    </table>
-
-    <div class="images">
-        <h2>Hardware Gallery</h2>
-        <img src="cpu.jpg" alt="CPU">
-        <img src="ram.jpg" alt="RAM">
-        <img src="hdd.jpg" alt="HDD">
-        <img src="motherboard.jpg" alt="Motherboard">
-    </div>
-
-    <blockquote>
-        "Understanding hardware is the first step toward mastering technology."
-    </blockquote>
-</div>
-
+<main>
+    <link rel="stylesheet" href="style.css">
+    <section id="contact-form">
+        <form id="myForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
 <footer>
-    © 2026 Hardware Hub | Web Technology Project
+    <p>&copy; 2026 My Website</p>
 </footer>
-
-</body>
-</html>

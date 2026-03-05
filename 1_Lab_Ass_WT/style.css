@@ -1,0 +1,15 @@
+body { font-family: "Times New Roman", serif; background: #f0f4f8; }
+
+.btn-primary {
+background-color: #2563eb;
+transition: background-color 0.3s ease;
+}
+.btn-primary:hover { background-color: #1a3c6e; }
+
+<!-- Bootstrap Responsive Grid -->
+<div class="container">
+<div class="row">
+<div class="col-md-6">Left Column</div>
+<div class="col-md-6">Right Column</div>
+</div>
+</div>

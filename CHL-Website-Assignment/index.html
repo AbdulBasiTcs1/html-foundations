@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHL - Computer Hardware Learning</title>
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0f1a;
+            color: #e0e6f0;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #81d4fa;
+        }
+
+        /* ===== HEADER / NAVBAR ===== */
+        header {
+            background: linear-gradient(90deg, #0d0f1a 0%, #1a2340 100%);
+            border-bottom: 2px solid #4fc3f7;
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-area img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid #4fc3f7;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4fc3f7;
+            letter-spacing: 1px;
+        }
+
+        .site-title span {
+            color: #ffffff;
+            font-size: 0.85rem;
+            display: block;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #cdd9f0;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        nav a:hover {
+            background: #1e3050;
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+
+        /* ===== HERO SECTION ===== */
+        #home {
+            background: linear-gradient(135deg, #0d1b2a 0%, #142840 50%, #0d0f1a 100%);
+            text-align: center;
+            padding: 70px 40px 50px;
+            border-bottom: 1px solid #1e3050;
+        }
+
+        #home h1 {
+            font-size: 2.6rem;
+            color: #4fc3f7;
+            margin-bottom: 16px;
+        }
+
+        #home p {
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #b0c4d8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1e3050;
+            border: 1px solid #4fc3f7;
+            color: #4fc3f7;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            margin-bottom: 10px;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #1a2340;
+        }
+
+        section h2 {
+            font-size: 1.7rem;
+            color: #4fc3f7;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1e3050;
+            display: inline-block;
+        }
+
+        section p {
+            color: #b0c4d8;
+            max-width: 800px;
+            margin-bottom: 14px;
+        }
+
+        /* ===== IMAGE SLIDER ===== */
+        #slider-section {
+            background: #0d1422;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 820px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 2px solid #1e3050;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-caption {
+            background: rgba(13, 15, 26, 0.88);
+            color: #cdd9f0;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(79, 195, 247, 0.8);
+            color: #0d0f1a;
+            border: none;
+            padding: 12px 18px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+
+        .slider-btn:hover {
+            background: #4fc3f7;
+        }
+
+        #prevBtn {
+            left: 10px;
+        }
+
+        #nextBtn {
+            right: 10px;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background: #2a3a55;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .dot.active {
+            background: #4fc3f7;
+        }
+
+        /* ===== LINKS SECTION ===== */
+        #links-section {
+            background: #0f1520;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 820px;
+        }
+
+        .link-box {
+            background: #111c2e;
+            border: 1px solid #1e3050;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .link-box h3 {
+            color: #81d4fa;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .link-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-box ul li {
+            margin-bottom: 8px;
+        }
+
+        .link-box ul li::before {
+            content: "→ ";
+            color: #4fc3f7;
+        }
+
+        /* ===== TABLE ===== */
+        #hardware-table {
+            background: #0d1422;
+        }
+
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background: #1a2e50;
+        }
+
+        thead th {
+            color: #4fc3f7;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid #4fc3f7;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #1e3050;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #111c2e;
+        }
+
+        tbody td {
+            padding: 11px 16px;
+            color: #cdd9f0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #102840;
+            color: #4fc3f7;
+            border: 1px solid #4fc3f7;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 0.78rem;
+        }
+
+        /* ===== BLOCKQUOTE ===== */
+        #about {
+            background: #0f1520;
+        }
+
+        blockquote {
+            border-left: 4px solid #4fc3f7;
+            background: #111c2e;
+            padding: 20px 28px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            max-width: 700px;
+            font-style: italic;
+            color: #cdd9f0;
+            font-size: 1.1rem;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #81d4fa;
+            font-style: normal;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        #contact {
+            background: #0d1422;
+        }
+
+        .contact-card {
+            background: #111c2e;
+            border: 1px solid #1e3050;
+            border-radius: 12px;
+            padding: 28px 32px;
+            max-width: 500px;
+        }
+
+        .contact-card p {
+            margin-bottom: 10px;
+            color: #b0c4d8;
+        }
+
+        .contact-card strong {
+            color: #4fc3f7;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #070a12;
+            color: #5a7090;
+            text-align: center;
+            padding: 22px 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e3050;
+        }
+
+        footer a {
+            color: #4fc3f7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo-area">
+            <img src="chl-logo.png" alt="CHL Logo" />
+            <div class="site-title">
+                CHL
+                <span>Computer Hardware Learning</span>
+            </div>
+        </div>
+
+        <nav>
+            <!-- Internal Links -->
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#hardware-table">Hardware</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <!-- ===== HOME / INTRO SECTION ===== -->
+    <section id="home">
+        <div class="badge">&#128187; Learn Computer Hardware</div>
+        <h1>Welcome to CHL</h1>
+        <p>
+            <strong>Computer Hardware Learning (CHL)</strong> is your go-to educational platform
+            for understanding how computers work from the inside out. Whether you are a student,
+            hobbyist, or a tech enthusiast, CHL helps you explore CPUs, RAM, motherboards, GPUs,
+            storage devices, and much more — all explained in a simple and engaging way.
+        </p>
+        <p>
+            Start your hardware journey today and unlock the core knowledge that powers every
+            digital device around you.
+        </p>
+    </section>
+
+
+    <!-- ===== IMAGE SLIDER SECTION ===== -->
+    <section id="slider-section">
+        <h2>&#128248; Hardware Gallery</h2>
+        <p>Explore key computer hardware components through our visual gallery.</p>
+
+        <div class="slider-wrapper">
+            <div class="slides" id="slides">
+
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <img src="slider-cpu.png" alt="CPU - Central Processing Unit" />
+                    <div class="slide-caption">&#10132; CPU (Central Processing Unit) — The brain of the computer that
+                        executes instructions.</div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="slider-ssd.png" alt="SSD - Solid State Drive" />
+                    <div class="slide-caption">&#10132; SSD (Solid State Drive) — Fast and reliable storage with no
+                        moving parts.</div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="slider-ram.png" alt="RAM - Random Access Memory" />
+                    <div class="slide-caption">&#10132; RAM (Random Access Memory) — Temporary memory that enables
+                        multitasking.</div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <img src="slider-gpu.png" alt="GPU - Graphics Processing Unit" />
+                    <div class="slide-caption">&#10132; GPU (Graphics Processing Unit) — Handles rendering of images,
+                        videos, and games.</div>
+                </div>
+
+            </div><!-- end .slides -->
+
+            <button class="slider-btn" id="prevBtn">&#8249;</button>
+            <button class="slider-btn" id="nextBtn">&#8250;</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </section>
+
+
+    <!-- ===== LINKS SECTION ===== -->
+    <section id="links-section">
+        <h2>&#128279; Useful Links</h2>
+        <p>Navigate within this page or explore related external resources.</p>
+
+        <div class="links-grid">
+            <!-- Internal Links -->
+            <div class="link-box">
+                <h3>&#128196; Internal Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a> — Learn more about CHL</li>
+                    <li><a href="#contact">Contact Us</a> — Get in touch with us</li>
+                    <li><a href="#hardware-table">Hardware Table</a> — View component list</li>
+                    <li><a href="#home">Back to Top</a> — Return to homepage</li>
+                </ul>
+            </div>
+
+            <!-- External Links -->
+            <div class="link-box">
+                <h3>&#127760; External Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.howtogeek.com/hardware/" target="_blank">HowToGeek Hardware</a>
+                        — In-depth hardware guides
+                    </li>
+                    <li>
+                        <a href="https://www.tomshardware.com/" target="_blank">Tom's Hardware</a>
+                        — Reviews &amp; benchmarks
+                    </li>
+                    <li>
+                        <a href="https://www.pcmag.com/categories/components" target="_blank">PCMag Components</a>
+                        — Expert component reviews
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Computer_hardware" target="_blank">Wikipedia: Computer
+                            Hardware</a>
+                        — Detailed hardware overview
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== HARDWARE TABLE SECTION ===== -->
+    <section id="hardware-table">
+        <h2>&#128202; Common Hardware Components</h2>
+        <p>A quick-reference table of essential computer hardware components and their roles.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Component</th>
+                    <th>Full Name</th>
+                    <th>Primary Function</th>
+                    <th>Example</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>CPU</strong></td>
+                    <td>Central Processing Unit</td>
+                    <td>Executes all instructions and computations</td>
+                    <td>Intel Core i7, AMD Ryzen 5</td>
+                    <td><span class="tag">Processing</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>RAM</strong></td>
+                    <td>Random Access Memory</td>
+                    <td>Stores data that is actively in use</td>
+                    <td>Samsung DDR4 16GB</td>
+                    <td><span class="tag">Memory</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>HDD</strong></td>
+                    <td>Hard Disk Drive</td>
+                    <td>Long-term data storage using magnetic disks</td>
+                    <td>Seagate 1TB HDD</td>
+                    <td><span class="tag">Storage</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>SSD</strong></td>
+                    <td>Solid State Drive</td>
+                    <td>Fast long-term storage with no moving parts</td>
+                    <td>Samsung 970 EVO NVMe</td>
+                    <td><span class="tag">Storage</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>GPU</strong></td>
+                    <td>Graphics Processing Unit</td>
+                    <td>Renders graphics, video, and images</td>
+                    <td>NVIDIA RTX 3060, AMD RX 6700</td>
+                    <td><span class="tag">Graphics</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>Motherboard</strong></td>
+                    <td>Main Circuit Board</td>
+                    <td>Connects all components to communicate</td>
+                    <td>ASUS ROG STRIX B550</td>
+                    <td><span class="tag">Board</span></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>PSU</strong></td>
+                    <td>Power Supply Unit</td>
+                    <td>Converts AC power to DC for all components</td>
+                    <td>Corsair RM750x 750W</td>
+                    <td><span class="tag">Power</span></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>Monitor</strong></td>
+                    <td>Display Unit</td>
+                    <td>Shows visual output to the user</td>
+                    <td>Dell 24" FHD IPS</td>
+                    <td><span class="tag">Output</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+        <h2>&#128100; About Us</h2>
+        <p>
+            <strong>CHL – Computer Hardware Learning</strong> was created to bridge the gap between
+            complex technical knowledge and everyday learners. Our mission is to make hardware
+            education accessible, visual, and easy to understand for everyone — from beginners to
+            advanced students.
+        </p>
+        <p>
+            This project is developed as part of the <strong>Web Technology course</strong> at
+            COMSATS University Islamabad, Attock Campus — Department of Computer Science.
+        </p>
+
+        <blockquote>
+            "The computer was born to solve problems that did not exist before."
+            <cite>— Bill Gates</cite>
+        </blockquote>
+
+        <blockquote>
+            "Hardware is the soul of technology; understanding it is understanding the future."
+            <cite>— CHL, Computer Hardware Learning</cite>
+        </blockquote>
+    </section>
+
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <h2>&#128222; Contact Us</h2>
+        <p>Have a question or want to collaborate? Reach out to the developer of this project.</p>
+
+        <div class="contact-card">
+            <p><strong>Developer:</strong> Abdul Basit</p>
+            <p><strong>Registration No:</strong> SP24-BCS-033</p>
+            <p><strong>Course:</strong> Web Technology (Spring 2026)</p>
+            <p><strong>Department:</strong> Computer Science</p>
+            <p><strong>University:</strong> COMSATS University Islamabad, Attock Campus</p>
+            <p><strong>Email:</strong> <a href="mailto:sp24-bcs-033@cuiatk.edu.pk">sp24-bcs-033@cuiatk.edu.pk</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/AbdulBasiTcs1" target="_blank">&#128040;
+                    github.com/AbdulBasiTcs1</a></p>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>
+            &copy; 2026 <strong style="color:#4fc3f7;">CHL</strong> — Computer Hardware Learning |
+            Developed by <strong style="color:#81d4fa;">Abdul Basit</strong> (SP24-BCS-033) |
+            COMSATS University Islamabad, Attock Campus
+        </p>
+        <p style="margin-top:6px;">
+            <a href="#home">Home</a> &nbsp;|&nbsp;
+            <a href="#about">About Us</a> &nbsp;|&nbsp;
+            <a href="#contact">Contact Us</a> &nbsp;|&nbsp;
+            <a href="https://github.com/AbdulBasiTcs1" target="_blank">&#128040; GitHub</a>
+        </p>
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT: Image Slider ===== -->
+    <script>
+        var currentSlide = 0;
+        var slides = document.getElementById('slides');
+        var totalSlides = document.querySelectorAll('.slide').length;
+        var dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            slides.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            dots.forEach(function (dot, i) {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', function () {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', function () {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        function goToSlide(n) {
+            currentSlide = n;
+            updateSlider();
+        }
+
+        // Auto-slide every 4 seconds
+        setInterval(function () {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 4000);
+    </script>
+
+</body>
+
+</html>
