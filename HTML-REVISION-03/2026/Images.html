@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tags in HTML</title>
+</head>
+<body>
+    <h1>Image Tags Examples</h1>
+    
+    <!-- Basic image tag -->
+    <img src="image.jpg" alt="Description of image">
+    
+    <!-- Image with width and height -->
+    <img src="image.jpg" alt="Description" width="300" height="200">
+    
+    <!-- Image with title attribute -->
+    <img src="image.jpg" alt="Description" title="Hover text">
+    
+    <!-- Image as a link -->
+    <a href="page.html">
+        <img src="image.jpg" alt="Clickable image">
+    </a>
+    
+    <!-- Responsive image with srcset -->
+    <img src="image.jpg" 
+         srcset="image-small.jpg 480w, image-medium.jpg 768w, image-large.jpg 1200w"
+         alt="Responsive image">
+    
+    <!-- Picture element for multiple image formats -->
+    <picture>
+        <source media="(max-width: 600px)" srcset="image-small.jpg">
+        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
+        <img src="image-large.jpg" alt="Picture element example">
+    </picture>
+</body>
+</html>
