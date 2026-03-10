@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout Techniques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+        
+        aside {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        
+        main {
+            flex: 1;
+            padding: 1rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Page Layout Techniques</h1>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Navigation and additional content goes here.</p>
+        </aside>
+        
+        <main>
+            <h2>Main Content</h2>
+            <p>Your main content goes here.</p>
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
