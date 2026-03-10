@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'DM Mono', monospace;
+    color: #1a1a1a;
+    padding: 48px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .list-block { width: 220px; }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 16px;
+  }
+
+  /* 1. Bare */
+  .bare { list-style: none; }
+  .bare li { padding: 6px 0; font-size: 14px; border-bottom: 1px solid #e0d9cc; }
+
+  /* 2. Dot accent */
+  .dot { list-style: none; }
+  .dot li { padding: 5px 0 5px 18px; font-size: 14px; position: relative; }
+  .dot li::before { content: '●'; position: absolute; left: 0; color: #c0392b; font-size: 8px; top: 8px; }
+
+  /* 3. Numbered */
+  .numbered { list-style: none; counter-reset: item; }
+  .numbered li { counter-increment: item; padding: 5px 0 5px 28px; font-size: 14px; position: relative; }
+  .numbered li::before { content: counter(item, decimal-leading-zero); position: absolute; left: 0; color: #c0392b; font-size: 11px; font-weight: 500; top: 7px; }
+
+  /* 4. Tag chips */
+  .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { background: #1a1a1a; color: #f5f0e8; font-size: 12px; padding: 4px 10px; border-radius: 2px; }
+
+  /* 5. Checklist */
+  .check { list-style: none; }
+  .check li { padding: 5px 0 5px 22px; font-size: 14px; position: relative; }
+  .check li::before { content: '☐'; position: absolute; left: 0; }
+  .check li.done { text-decoration: line-through; color: #aaa; }
+  .check li.done::before { content: '☑'; color: #2ecc71; }
+</style>
+</head>
+<body>
+
+<div class="list-block">
+  <h3>Bare</h3>
+  <ul class="bare">
+    <li>Typography</li><li>Color theory</li><li>Layout</li><li>Motion</li>
+  </ul>
+</div>
+
+<div class="list-block">
+  <h3>Dot Accent</h3>
+  <ul class="dot">
+    <li>Typography</li><li>Color theory</li><li>Layout</li><li>Motion</li>
+  </ul>
+</div>
+
+<div class="list-block">
+  <h3>Numbered</h3>
+  <ol class="numbered">
+    <li>Typography</li><li>Color theory</li><li>Layout</li><li>Motion</li>
+  </ol>
+</div>
+
+<div class="list-block">
+  <h3>Tags</h3>
+  <ul class="tags">
+    <li>HTML</li><li>CSS</li><li>JS</li><li>React</li><li>SVG</li>
+  </ul>
+</div>
+
+<div class="list-block">
+  <h3>Checklist</h3>
+  <ul class="check">
+    <li class="done">Typography</li>
+    <li class="done">Color theory</li>
+    <li>Layout</li>
+    <li>Motion</li>
+  </ul>
+</div>
+
+</body>
+</html>
