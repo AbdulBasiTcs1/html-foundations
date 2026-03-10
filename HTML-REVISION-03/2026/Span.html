@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPAN Tag</title>
+  <style>
+    /* span is an INLINE container — only takes as much width as its content */
+    .highlight {
+      background-color: yellow;
+    }
+
+    .red-text {
+      color: red;
+      font-weight: bold;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Basic span: inline container, no semantic meaning -->
+  <p>This is a <span class="highlight">highlighted word</span> in a sentence.</p>
+
+  <!-- Span to style part of text differently -->
+  <p>Price: <span class="red-text">$99.99</span> only!</p>
+
+  <!-- Multiple spans in one line — they sit inline, no line break -->
+  <p>
+    <span class="red-text">Red</span>,
+    <span class="underline">Underlined</span>,
+    <span style="color: blue;">Blue</span>
+  </p>
+
+  <!-- span vs div: span stays inline, div breaks to new line -->
+  <p>
+    Inline: <span style="background:lightgreen;">Span A</span> <span style="background:lightblue;">Span B</span>
+  </p>
+
+</body>
+</html>
