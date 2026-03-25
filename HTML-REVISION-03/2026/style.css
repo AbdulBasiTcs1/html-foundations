@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 750px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* Header styling */
+th {
+    background-color: #d9d9d9;
+    font-weight: bold;
+}
+
+/* Colors (matched to your image) */
+.yellow {
+    background-color: #f3e5ab;
+}
+
+.green {
+    background-color: #b7c7b0;
+}
+
+.blue {
+    background-color: #a9bfd3;
+}
+
+.beige {
+    background-color: #e8dcb5;
+}
